@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Soal 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="index.js"></script>
+</head>
+<body>
+        <input type="text" placeholder="Insert Text Here" id="input">
+        <input type="submit" onclick="btnEncode()" value="Encode">
+</body>
+</html>
+<script>
+    btnEncode = () => {
+        let input = document.getElementById('input').value;
+        encode(input);
+        if (typeof(Storage) !== "undefined") {
+            let data = localStorage.getItem("dataEncode");
+        }else{
+            console.log("Browser not support")
+        }
+    }
+</script>
